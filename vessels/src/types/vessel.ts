@@ -1,3 +1,3 @@
 export type Vessel = {
-  name: string;
+	name: string;
 };

@@ -20,7 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky"
   },
   "eslintConfig": {
     "extends": [
@@ -42,6 +43,7 @@
   },
   "devDependencies": {
     "@types/jest": "^27.5.2",
+    "lint-staged": "^15.2.5",
     "prettier": "3.3.1"
   }
 }
