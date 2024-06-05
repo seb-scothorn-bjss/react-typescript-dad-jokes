@@ -1,23 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useMemo } from 'react';
 import './App.css';
-
+import { getVesselsOver10m, getVesselsUnder10m } from './utils/vessels-parser';
 function App() {
+	const vesselsOver10m = useMemo(getVesselsOver10m, []);
+	const vesselsUnder10m = useMemo(getVesselsUnder10m, []);
+
+	const Vessels = () => {
+		return (
+			<div>
+				{vesselsOver10m !== undefined &&
+					vesselsOver10m.map((vessel) => {
+						return <div>{vessel.name}</div>;
+					})}
+				{vesselsUnder10m !== undefined &&
+					vesselsUnder10m.map((vessel) => {
+						return <div>{vessel.name}</div>;
+					})}
+			</div>
+		);
+	};
+
 	return (
 		<div className="App">
 			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-				<p>
-					Edit <code>src/App.tsx</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
+				<Vessels />
 			</header>
 		</div>
 	);
