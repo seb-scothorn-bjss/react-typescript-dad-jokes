@@ -1,5 +1,9 @@
 export type Vessel = {
 	name: string;
+	yearBuilt: number;
+	homePort: string;
+	enginePower: number;
+	length: number;
 };
 
 export type RawVesselOver10m = {

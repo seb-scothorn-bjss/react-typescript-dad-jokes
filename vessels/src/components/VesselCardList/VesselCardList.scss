@@ -1,0 +1,7 @@
+.vessel-card-list {
+    display: flex;
+    flex-direction: column;
+}
+.vessel-card-list > * {
+   margin: 10px
+}

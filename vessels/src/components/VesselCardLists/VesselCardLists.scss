@@ -1,0 +1,7 @@
+.vessel-card-lists {
+    display: flex;
+}
+
+.vessel-card-lists > * {
+    flex: 50%;
+}

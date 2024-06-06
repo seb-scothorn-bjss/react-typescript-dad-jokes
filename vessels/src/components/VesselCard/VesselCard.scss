@@ -1,0 +1,30 @@
+.vessel-card {
+    border-radius: 10px;
+    background-color: #31363F;
+    min-width: 300px;
+    border-width: 1px;
+    border-color: transparent;
+    border-style: solid;
+}
+
+.highlighted {
+    border-color: #76ABAE;
+}
+
+.vessel-card > * {
+    margin: 5px 0px;
+}
+
+.vessel-card-name {
+    font-size: 1.5rem;
+}
+
+.vessel-card-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.vessel-card-stat {
+    font-size: 1rem;
+    margin: 2px
+}

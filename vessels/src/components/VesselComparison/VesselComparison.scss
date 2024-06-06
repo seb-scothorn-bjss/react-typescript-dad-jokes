@@ -1,0 +1,11 @@
+.vessel-comparison {
+}
+
+.vessel-comparison-cards {
+    display: flex;
+}
+
+.vessel-comparison-cards > * {
+    flex: 50%;
+    margin: 5px;
+}
