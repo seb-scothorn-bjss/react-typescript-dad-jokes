@@ -10,8 +10,13 @@ export const getVesselGroupStats = (vessels: Vessel[]): VesselGroupStats => {
 		prev.yearBuilt > next.yearBuilt ? prev : next,
 	);
 
+	const highestScrabbleScore = vessels.reduce((prev, next) =>
+		prev.scrabbleScore > next.scrabbleScore ? prev : next,
+	);
+
 	return {
 		oldest,
 		newest,
+		highestScrabbleScore,
 	};
 };

@@ -4,6 +4,7 @@ export type Vessel = {
 	homePort: string;
 	enginePower: number;
 	length: number;
+	scrabbleScore: number;
 };
 
 export type RawVesselOver10m = {

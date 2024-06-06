@@ -1,6 +1,7 @@
 import vesselsOver10m from '../data/Vessels_over_10m.json';
 import vesselsUnder10m from '../data/Vessels_under_10m.json';
 import { RawVesselOver10m, RawVesselUnder10m, Vessel } from '../types/vessel';
+import { getScrabbleScore } from './get-scrabble-score';
 
 const parseRawVesselOver10m = (vessel: RawVesselOver10m): Vessel | null => {
 	const name = vessel['Vessel name'];
@@ -8,8 +9,16 @@ const parseRawVesselOver10m = (vessel: RawVesselOver10m): Vessel | null => {
 	const homePort = vessel['Home port'];
 	const enginePower = vessel['Engine power'];
 	const length = vessel['Overall length'];
+	const scrabbleScore = getScrabbleScore(name);
 
-	if (!name || !yearBuilt || !homePort || !enginePower || !length)
+	if (
+		!name ||
+		!yearBuilt ||
+		!homePort ||
+		!enginePower ||
+		!length ||
+		!scrabbleScore
+	)
 		return null;
 
 	return {
@@ -18,6 +27,7 @@ const parseRawVesselOver10m = (vessel: RawVesselOver10m): Vessel | null => {
 		homePort,
 		enginePower,
 		length,
+		scrabbleScore,
 	};
 };
 
@@ -27,8 +37,16 @@ const parseRawVesselUnder10m = (vessel: RawVesselUnder10m): Vessel | null => {
 	const homePort = vessel['Home port'];
 	const enginePower = vessel['Engine Power (kw)'];
 	const length = vessel['Overall length'];
+	const scrabbleScore = getScrabbleScore(name);
 
-	if (!name || !yearBuilt || !homePort || !enginePower || !length)
+	if (
+		!name ||
+		!yearBuilt ||
+		!homePort ||
+		!enginePower ||
+		!length ||
+		!scrabbleScore
+	)
 		return null;
 
 	return {
@@ -37,6 +55,7 @@ const parseRawVesselUnder10m = (vessel: RawVesselUnder10m): Vessel | null => {
 		homePort,
 		enginePower,
 		length,
+		scrabbleScore,
 	};
 };
 

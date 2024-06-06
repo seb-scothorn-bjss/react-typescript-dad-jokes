@@ -43,6 +43,17 @@ export const VesselComparisons = (props: VesselComparisonsProps) => {
 						: 'vesselUnder10m'
 				}
 			/>
+			<VesselComparison
+				title="Highest Scrabble Score"
+				vesselOver10m={statsVesselsOver10m.highestScrabbleScore}
+				vesselUnder10m={statsVesselsUnder10m.highestScrabbleScore}
+				highlightedVessel={
+					statsVesselsOver10m.highestScrabbleScore >=
+					statsVesselsUnder10m.highestScrabbleScore
+						? 'vesselOver10m'
+						: 'vesselUnder10m'
+				}
+			/>
 		</div>
 	);
 };
