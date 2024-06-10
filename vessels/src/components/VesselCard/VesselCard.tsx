@@ -26,11 +26,8 @@ export const VesselCard = (props: VesselCardProps) => {
 				<div className="vessel-card-stat">Home Port</div>
 				<div className="vessel-card-stat">{homePort}</div>
 
-				<div className="vessel-card-stat">Engine Power</div>
-				<div className="vessel-card-stat">{enginePower}</div>
-
 				<div className="vessel-card-stat">Length</div>
-				<div className="vessel-card-stat">{length}</div>
+				<div className="vessel-card-stat">{length}m</div>
 
 				<div className="vessel-card-stat">Scrabble Score</div>
 				<div className="vessel-card-stat">{scrabbleScore}</div>

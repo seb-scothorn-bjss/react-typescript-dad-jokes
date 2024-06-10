@@ -20,7 +20,6 @@ export const VesselComparisons = (props: VesselComparisonsProps) => {
 		() => getVesselGroupStats(vesselsUnder10m),
 		[vesselsUnder10m],
 	);
-
 	return (
 		<div className="vessel-comparisons">
 			<VesselComparison
@@ -28,7 +27,8 @@ export const VesselComparisons = (props: VesselComparisonsProps) => {
 				vesselOver10m={statsVesselsOver10m.oldest}
 				vesselUnder10m={statsVesselsUnder10m.oldest}
 				highlightedVessel={
-					statsVesselsOver10m.oldest < statsVesselsUnder10m.oldest
+					statsVesselsOver10m.oldest.yearBuilt <
+					statsVesselsUnder10m.oldest.yearBuilt
 						? 'vesselOver10m'
 						: 'vesselUnder10m'
 				}
@@ -38,7 +38,8 @@ export const VesselComparisons = (props: VesselComparisonsProps) => {
 				vesselOver10m={statsVesselsOver10m.newest}
 				vesselUnder10m={statsVesselsUnder10m.newest}
 				highlightedVessel={
-					statsVesselsOver10m.newest > statsVesselsUnder10m.newest
+					statsVesselsOver10m.newest.yearBuilt >
+					statsVesselsUnder10m.newest.yearBuilt
 						? 'vesselOver10m'
 						: 'vesselUnder10m'
 				}
@@ -48,8 +49,8 @@ export const VesselComparisons = (props: VesselComparisonsProps) => {
 				vesselOver10m={statsVesselsOver10m.highestScrabbleScore}
 				vesselUnder10m={statsVesselsUnder10m.highestScrabbleScore}
 				highlightedVessel={
-					statsVesselsOver10m.highestScrabbleScore >=
-					statsVesselsUnder10m.highestScrabbleScore
+					statsVesselsOver10m.highestScrabbleScore.scrabbleScore >=
+					statsVesselsUnder10m.highestScrabbleScore.scrabbleScore
 						? 'vesselOver10m'
 						: 'vesselUnder10m'
 				}
