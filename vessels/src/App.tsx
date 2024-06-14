@@ -7,20 +7,6 @@ function App() {
 	const vesselsOver10m = useMemo(getVesselsOver10m, []);
 	const vesselsUnder10m = useMemo(getVesselsUnder10m, []);
 
-	// const AllVessels = () => {
-	// 	return (
-	// 		<div>
-	// 			{vesselsOver10m !== undefined &&
-	// 				vesselsUnder10m !== undefined && (
-	// 					<VesselCardLists
-	// 						vesselsOver10m={vesselsOver10m}
-	// 						vesselsUnder10m={vesselsUnder10m}
-	// 					/>
-	// 				)}
-	// 		</div>
-	// 	);
-	// };
-
 	return (
 		<div className="App">
 			<header className="App-header">
